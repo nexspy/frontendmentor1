@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+body {
+    color: white;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+    background-color: hsl(229, 57%, 11%);
+    padding: 0px;
+    margin: 0px;
+}
+.bold {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-size: 12px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg-desktop.svg") 0px 279px no-repeat;
+}
+.container .wrapper {
+    width: 62%;
+    margin: 0px auto;
+}
+
+.fylo,
+.progress {
+    margin-top: 234px;
+    padding: 30px;
+    display: block;
+    background-color: hsl(228, 56%, 26%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    float: left;
+
+    box-shadow: 10px 8px 30px rgba(0,0,0,0.4);
+}
+
+.fylo {
+    border-top-right-radius: 60px;
+    width: 30%;
+    margin-right: 20px;
+}
+.fylo .top {
+    margin-bottom: 20px;
+}
+.fylo .top img {
+    width: 90px;
+}
+.fylo .bottom .icon {
+    float: left;
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: hsl(229, 57%, 11%);
+}
+.fylo .bottom .icon img {
+    display: block;
+    width: 20px;
+    margin: 6px auto 0px;
+}
+.fylo .bottom .icon.icon-folder img {
+    width: 22px;
+    padding-top: 4px;
+}
+.fylo .bottom .icon.icon-upload img {
+    width: 25px;
+    padding-top: 5px;
+}
+
+.progress {
+    position: relative;
+    margin-top: 255px;
+    width: 66%;
+    padding-top: 18px;
+}
+.progress .top p {
+    color: hsl(229, 7%, 55%);
+}
+.progress .top p span {
+    color: white;
+}
+.progress .bottom .left {
+    float: left;
+}
+.progress .bottom .right {
+    float: right;
+}
+.progress .dialog {
+    position: absolute;
+    top: -38px;
+    right: 28px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.progress .dialog > div {
+    float: left;
+    color: hsl(229, 7%, 55%);
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.progress .dialog > div:first-child {
+    color: black;
+    font-size: 26px;
+    padding-right: 10px;
+    padding-top: 0px;
+    font-weight: bold;
+}
+.progress .dialog span {
+    font-size: 32px;
+    font-weight: bold;
+}
+.progress .dialog span.pop {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: -20px;
+    right: 0px;
+
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+.progress .bar {
+    width: 100%;
+    height: 16px;
+    margin-bottom: 10px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.progress .bar .line {
+    position: relative;
+    width: 70%;
+    height: 12px;
+    margin: 2px 0px;
+    border-radius: 6px;
+    /* background-color: white; */
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    transition: width 1s;
+}
+.progress .bar .line .dot {
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    right: 1px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        background-position-x: -640px;
+        background-position-y: 0px;
+        background-size: cover;
+    }
+    .container .wrapper {
+        width: 90%;
+    }
+
+    .fylo,
+    .progress {
+        width: 100%;
+        padding: 60px;
+    }
+
+    .fylo {
+        margin-top: 110px;
+        border-top-right-radius: 120px;
+    }
+    .fylo .top {
+        margin-bottom: 40px;
+    }
+    .fylo .top img {
+        width: 140px;
+    }
+    .fylo .bottom .icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 16px;
+        margin-right: 20px;
+    }
+    .fylo .bottom .icon:last-child {
+        margin-right: 0px;
+    }
+    .fylo .bottom .icon img {
+        width: 30px;
+        margin-top: 15px;
+    }
+    .fylo .bottom .icon.icon-folder img {
+        width: 37px;
+    }
+    .fylo .bottom .icon.icon-upload img {
+        width: 41px;
+    }
+
+    .progress {
+        text-align: center;
+        margin-top: 20px;
+        /* padding-bottom: 60px; */
+        padding: 50px;
+    }
+    .progress .top p {
+        font-size: 16px;
+        margin: 0px 0px 30px;
+    }
+    .progress .bar .line {
+        
+    }
+    .progress .dialog > div {
+        padding-top: 30px;
+    }
+    .progress .dialog > div:first-child {
+        font-size: 56px;
+    }
+    .progress .dialog span.pop {
+        display: none;
+    }
+    .progress .dialog {
+        bottom: -54px;
+        right: 20%;
+        top: auto;
+        padding: 10px 35px;
+    }
+}
